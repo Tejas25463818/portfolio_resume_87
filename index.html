@@ -4,14 +4,176 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tejas C | Resume Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(120deg, #f3f4f6, #e5e7eb);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Container styling */
+        .resume-container {
+            background: #ffffff;
+            padding: 30px;
+            border: 1px solid #d1d5db;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 900px;
+            width: 90%;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .resume-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Header styling */
+        header {
+            text-align: center;
+            border-bottom: 2px solid #d1d5db;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            color: #1f2937;
+        }
+
+        header p {
+            margin: 5px 0;
+            font-size: 1.1rem;
+            color: #6b7280;
+        }
+
+        header a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header a:hover {
+            color: #1d4ed8;
+        }
+
+        /* Header Image */
+        header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #2563eb;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Section headers */
+        section h2 {
+            font-size: 1.8rem;
+            color: #1f2937;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        /* Lists styling */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+            background: #f9fafb;
+            padding: 15px 20px;
+            border-radius: 12px;
+            color: #374151;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        ul li:hover {
+            background: #eef2ff;
+            border-color: #2563eb;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Footer styling */
+        footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            text-align: center;
+            color: #6b7280;
+            background: #2563eb;
+            color: white;
+            padding: 10px 0;
+            border-radius: 12px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Buttons */
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #ffffff;
+            background: #2563eb;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        /* Highlighted sections */
+        .highlight {
+            background: linear-gradient(120deg, #dbeafe, #93c5fd);
+            padding: 10px 15px;
+            border-radius: 12px;
+            color: #1f2937;
+            font-weight: bold;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .resume-container {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="resume-container">
         <header>
-            <!-- Add an image with a link here -->
             <a href="https://www.linkedin.com/in/tejas-c-shetty" target="_blank">
-                <img src="" alt="Tejas C" style="width: 150px; height: auto; border-radius: 50%;">
+                <img src="your-image-link.jpg" alt="Tejas C">
             </a>
             <h1>Tejas C</h1>
             <p>Location: Hubballi, Karnataka, India</p>
@@ -22,7 +184,7 @@
 
         <section>
             <h2>Fresher</h2>
-            <p>To consistently exceed expectations, I bring a strong commitment, adaptability for continuous learning, innovative critical thinking, and a strategic approach to marketing.</p>
+            <p class="highlight">To consistently exceed expectations, I bring a strong commitment, adaptability for continuous learning, innovative critical thinking, and a strategic approach to marketing.</p>
         </section>
 
         <section>
@@ -52,23 +214,17 @@
         <section>
             <h2>Projects</h2>
             <ul>
-                <li><strong>Cropcart:</strong> ReactJS, NodeJS, ExpressJS, MongoDB<br>
-                    Online grocery ordering system using the MERN stack. The project includes responsive design for mobile and large-screen devices with user authentication.
-                </li>
-                <li><strong>Road Segmentation:</strong> Deep Learning Project<br>
-                    Road semantic segmentation using algorithms like U-Net, PSP-Net, and FPN-Net with image datasets.
-                </li>
-                <li><strong>Student Stress Analysis:</strong> Deep Learning Project<br>
-                    Stress level tracking using algorithms like LSTM and BI-LSTM based on gender, age, and demographic factors.
-                </li>
+                <li><strong>Cropcart:</strong> MERN Stack<br>Online grocery ordering system with responsive design and user authentication.</li>
+                <li><strong>Road Segmentation:</strong> Deep Learning Project<br>Road semantic segmentation using U-Net, PSP-Net, and FPN-Net.</li>
+                <li><strong>Student Stress Analysis:</strong> Deep Learning<br>Stress level tracking using LSTM and BI-LSTM algorithms.</li>
             </ul>
         </section>
 
         <section>
             <h2>Achievements</h2>
             <ul>
-                <li>Research paper on Road Segmentation accepted for publication at ICEI 2024 (IIT Dharwad).</li>
-                <li>Runner-up at National Level Paper Presentation (Praxis 2024) on Tomato Leaf Detection using Deep Learning.</li>
+                <li>Research paper on Road Segmentation accepted at ICEI 2024 (IIT Dharwad).</li>
+                <li>Runner-up at National Level Paper Presentation (Praxis 2024).</li>
             </ul>
         </section>
 
@@ -77,8 +233,7 @@
             <ul>
                 <li>Machine Learning and AI</li>
                 <li>Web Development</li>
-                <li>Learning New and Innovative Things</li>
-                <li>Team Leadership and Team Building</li>
+                <li>Team Leadership and Building</li>
             </ul>
         </section>
 
